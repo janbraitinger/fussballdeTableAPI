@@ -14,4 +14,4 @@ RUN npm install
 EXPOSE 3001
 
 # Starten Sie die Anwendung
-CMD ["npm", "start"]
+CMD ["node", "index"]
