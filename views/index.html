@@ -1,0 +1,31 @@
+<!-- html basic setup -->   
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>KickAPI</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="handler.js" defer></script>
+    </head>
+    <body>
+ 
+     
+<header>
+  Wandel Widget zur <span class="label">API</span> um
+
+ </header>
+<div id="wrapper">
+<input type="text" class="input" id="key" placeholder="Schlüssel">
+<input type="text" class="input" id="website" placeholder="Webseite"><br/>
+<span class="small">*Daten von Fußball.de</span>
+</div>
+
+<button class="button-flat">generieren</button>
+
+<input type="text" id="display" value="Dein API Link" readonly>
+
+  <div id="info">
+    <p>Wandle dein Tabellen-Widget von Fußball.de in eine API um. Als Ergebnis erhältst du einen Link, der mittels HTTP-Request eine JSON-Liste der Tabelle zurückgibt. Diese enthält den Tabellenplatz, den Vereinsnamen, das Logo als Link, die Punkte, die Tordifferenz und die Anzahl der gespielten Spiele. </div>
+    </body>
+</html>
