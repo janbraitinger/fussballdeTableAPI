@@ -1,5 +1,5 @@
 # Verwenden Sie ein offizielles Node.js-Image als Basis
-FROM node:latest
+FROM node:18.16.0-alpine3.17
 
 # Legen Sie das Arbeitsverzeichnis innerhalb des Containers fest
 WORKDIR /app
@@ -14,4 +14,4 @@ RUN npm install
 EXPOSE 3001
 
 # Starten Sie die Anwendung
-CMD ["node", "index"]
+CMD ["npm", "start"]
