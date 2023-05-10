@@ -48,7 +48,7 @@ async function scrapeUserData(key, website) {
         });
 
         return data;
-    } catch {
+    } catch(error) {
         return JSON.parse({});
     }
 }
