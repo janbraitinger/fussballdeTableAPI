@@ -1,107 +1,52 @@
+const fs = require('fs');
+const path = require('path');
+const util = require('util');
+const log_file = path.join(__dirname, 'console.log');
+
+
+const log_stdout = process.stdout;
+const log_file_stream = fs.createWriteStream(log_file, { flags: 'a' });
+
+
+console.log = function () {
+  log_file_stream.write(util.format.apply(null, arguments) + '\n');
+  log_stdout.write(util.format.apply(null, arguments) + '\n');
+};
+
+console.error = console.log; 
+
+
 const express = require('express');
-const axios = require('axios');
-const cheerio = require('cheerio');
-const path = require("path");
-const app = express();
+const cors = require('cors');
+const logTimestamp = require('log-timestamp');
 
-app.set('views', './views');
-app.use(express.static('public'));
-
-app.use(express.json());
-
-
-
-
-async function scrapeUserData(key, website) {
-    console.log("Request number " + number);
-    number++;
-    const url = 'https://www.fussball.de/widget2/-/schluessel/' + key + '/target/widget1/caller/' + website;
-
-    try {
-
-        const response = await axios.get(url);
-        const html = response.data;
-        const $ = cheerio.load(html);
-
-
-        // Extrahieren der Daten aus der HTML-Tabelle
-        const data = [];
-        $('tbody tr').each(function(index) {
-            const $tds = $(this).find('td');
-            const position = index + 1;
-            const $clubWrapper = $tds.eq(2).find('.club-wrapper');
-            const clubName = $clubWrapper.find('.club-name').text().trim();
-            const gamesPlayed = $tds.eq(3).text().trim();
-            const goalDiff = $tds.eq(4).text().trim();
-            const points = $tds.eq(5).text().trim();
-            const imgUrl = $clubWrapper.find('.club-logo img').attr('src');
-            const logo = imgUrl.replace(/^\/\//, 'https://');
-
-            data.push({
-                position,
-                clubName,
-                gamesPlayed,
-                goalDiff,
-                points,
-                logo,
-            });
-        });
-
-        return data;
-    } catch(error) {
-        return JSON.parse({});
-    }
+function getTimestamp() {
+  const date = new Date().toLocaleString('de-DE', {
+    timeZone: 'Europe/Berlin',
+    hour12: false,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+  return `[${date}]`;
 }
 
-
-app.post('/newAPI', async (req, res) => {
-    const key = req.body.key;
-    const website = req.body.website;
-    const data = await scrapeUserData(key, website);
-    if (data.length === 0) {
-        res.json({
-            success: false
-        });
-    } else {
-        res.json({
-            success: true
-        });
-    }
-    
-  });
-  
+logTimestamp(() => getTimestamp());
+const route = require('./routes/standardRoutes');
+const app = express();
 
 
+const PORT = 3001;
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
-})
-
-
-
-var number = 1
-app.get('/show/:key/:website', async (req, res) => {
-
-    const key = req.params.key;
-    const website = req.params.website;
-    const data = await scrapeUserData(key, website)
-    const tableRows = data.map(item => `<tr><td>${item.position}</td><td> <img src="${item.logo}"></td><td>${item.clubName}</td><td>${item.gamesPlayed}</td><td>${item.goalDiff}</td><td>${item.points}</td></tr>`).join('');
-    const table = `<table>${tableRows}</table>`;
-    res.send(table);
-});
+app.use(express.json());
+app.use(cors());
+app.use('/', route)
+app.set('trust proxy', true);
 
 
-app.get('/:key/:website', async (req, res) => {
-    const key = req.params.key;
-    const website = req.params.website;
-    const data = await scrapeUserData(key, website)
-    res.json(data);
-});
-
-
-
-
-// Starten des Servers auf Port 3000
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log('Server started on port 3001');
 });
