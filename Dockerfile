@@ -12,7 +12,7 @@ RUN npm install
 
 # Exponieren Sie den Port, auf dem die Anwendung ausgeführt wird
 EXPOSE 3000
-RUN apk add certbot
+
 
 # Starten Sie die Anwendung
 CMD ["node", "index.js"]

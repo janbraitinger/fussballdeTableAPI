@@ -654,3 +654,4 @@
 [12.08.2023, 23:42:21] Failed to create Let's Encrypt certificate: Command failed: certbot certonly --standalone -d tabelle-api.net
 /bin/sh: certbot: command not found
 
+[12.08.2023, 23:52:37] Server started on port 3000
