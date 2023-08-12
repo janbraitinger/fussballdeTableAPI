@@ -414,3 +414,238 @@
 [23.05.2023, 11:08:41] Server started on port 3001
 [23.05.2023, 11:09:05] Server started on port 3001
 [23.05.2023, 11:38:49] Server started on port 3001
+[23.05.2023, 12:05:59] Server started on port 3001
+[14.07.2023, 21:49:15] Server started on port 3001
+[14.07.2023, 21:51:37] API Call
+[14.07.2023, 21:51:37] Display table
+[12.08.2023, 21:53:30] Server started on port 3001
+[12.08.2023, 21:53:43] API Call
+[12.08.2023, 21:53:44] Display table
+[12.08.2023, 21:53:57] API Call
+[12.08.2023, 21:53:58] Display table
+[12.08.2023, 21:56:07] API Call
+[12.08.2023, 21:56:07] Send API link to user
+[12.08.2023, 21:56:18] API Call
+[12.08.2023, 21:56:19] Send JSON data
+[12.08.2023, 21:56:28] API Call
+[12.08.2023, 21:56:28] Display table
+[12.08.2023, 21:56:57] API Call
+[12.08.2023, 21:56:57] Error occurred on the user's side
+[12.08.2023, 21:57:19] API Call
+[12.08.2023, 21:57:19] Error occurred on the user's side
+[12.08.2023, 21:57:22] API Call
+[12.08.2023, 21:57:22] Send API link to user
+[12.08.2023, 21:57:26] API Call
+[12.08.2023, 21:57:26] Send JSON data
+[12.08.2023, 21:57:50] API Call
+[12.08.2023, 21:57:50] Display table
+[12.08.2023, 21:57:55] API Call
+[12.08.2023, 21:57:55] Error occurred on the user's side
+[12.08.2023, 21:58:01] API Call
+[12.08.2023, 21:58:01] Display table
+[12.08.2023, 22:03:53] Server started on port 3001
+[12.08.2023, 22:04:01] API Call
+[12.08.2023, 22:04:01] Display table
+[12.08.2023, 22:04:13] Server started on port 3001
+[12.08.2023, 22:04:31] Server started on port 3001
+[12.08.2023, 22:05:10] Server started on port 3001
+[12.08.2023, 22:05:10] Server started on port 3001
+[12.08.2023, 22:05:23] Server started on port 3001
+[12.08.2023, 22:05:27] Server started on port 3001
+[12.08.2023, 22:05:34] Server started on port 3001
+[12.08.2023, 22:05:45] Server started on port 3001
+[12.08.2023, 22:06:29] Server started on port 3001
+[12.08.2023, 22:06:35] Server started on port 3001
+[12.08.2023, 22:07:22] Server started on port 3001
+[12.08.2023, 22:07:55] Server started on port 3001
+[12.08.2023, 22:08:12] Server started on port 3001
+[12.08.2023, 22:09:39] Server started on port 3001
+[12.08.2023, 22:10:03] Server started on port 3001
+[12.08.2023, 22:10:19] Server started on port 3001
+[12.08.2023, 22:10:36] Server started on port 3001
+[12.08.2023, 22:10:40] Server started on port 3001
+[12.08.2023, 22:10:41] API Call
+[12.08.2023, 22:10:41] Display table
+[12.08.2023, 22:11:07] Server started on port 3001
+[12.08.2023, 22:11:13] start
+[12.08.2023, 22:12:38] Server started on port 3001
+[12.08.2023, 22:12:42] start
+[12.08.2023, 22:12:43] start
+[12.08.2023, 22:14:16] Server started on port 3001
+[12.08.2023, 22:14:21] start
+[12.08.2023, 22:14:21] ReferenceError: index is not defined
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/index.js:51:12
+    at Layer.handle [as handle_request] (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:280:10)
+    at cors (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/cors/lib/index.js:188:7)
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/cors/lib/index.js:224:17
+[12.08.2023, 22:14:29] Server started on port 3001
+[12.08.2023, 22:14:31] start
+[12.08.2023, 22:14:33] start
+[12.08.2023, 22:14:39] Server started on port 3001
+[12.08.2023, 22:14:54] Server started on port 3001
+[12.08.2023, 22:14:55] start
+[12.08.2023, 22:14:55] ReferenceError: index is not defined
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/index.js:51:30
+    at Layer.handle [as handle_request] (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:280:10)
+    at cors (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/cors/lib/index.js:188:7)
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/cors/lib/index.js:224:17
+[12.08.2023, 22:15:47] Server started on port 3001
+[12.08.2023, 22:15:48] start
+[12.08.2023, 22:15:48] ReferenceError: index is not defined
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/index.js:51:12
+    at Layer.handle [as handle_request] (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:280:10)
+    at cors (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/cors/lib/index.js:188:7)
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/cors/lib/index.js:224:17
+[12.08.2023, 22:17:04] Server started on port 3001
+[12.08.2023, 22:17:15] Server started on port 3001
+[12.08.2023, 22:17:16] start
+[12.08.2023, 22:17:16] TypeError: path must be absolute or specify root to res.sendFile
+    at ServerResponse.sendFile (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/response.js:441:11)
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/index.js:51:7
+    at Layer.handle [as handle_request] (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:280:10)
+    at cors (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/cors/lib/index.js:188:7)
+[12.08.2023, 22:17:25] Server started on port 3001
+[12.08.2023, 22:17:25] start
+[12.08.2023, 22:17:25] TypeError: path must be absolute or specify root to res.sendFile
+    at ServerResponse.sendFile (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/response.js:441:11)
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/index.js:51:7
+    at Layer.handle [as handle_request] (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/express/lib/router/index.js:280:10)
+    at cors (/Users/janbraitinger/Documents/Projekte/fussballCrawler/node_modules/cors/lib/index.js:188:7)
+[12.08.2023, 22:18:30] Server started on port 3001
+[12.08.2023, 22:18:31] start
+[12.08.2023, 22:20:14] start
+[12.08.2023, 22:21:37] start
+[12.08.2023, 22:23:52] start
+[12.08.2023, 22:26:26] start
+[12.08.2023, 22:28:04] start
+[12.08.2023, 22:28:10] start
+[12.08.2023, 22:28:11] start
+[12.08.2023, 22:28:24] start
+[12.08.2023, 22:28:25] start
+[12.08.2023, 22:29:12] Server started on port 3001
+[12.08.2023, 22:29:14] Server started on port 3001
+[12.08.2023, 22:29:58] start
+[12.08.2023, 22:30:11] start
+[12.08.2023, 22:30:29] Server started on port 3000
+[12.08.2023, 22:31:07] API Call
+[12.08.2023, 22:31:07] Display table
+[12.08.2023, 22:31:56] start
+[12.08.2023, 22:32:31] start
+[12.08.2023, 22:32:48] start
+[12.08.2023, 22:34:46] Server started on port 3000
+[12.08.2023, 22:35:50] start
+[12.08.2023, 22:36:03] start
+[12.08.2023, 22:36:04] API Call
+[12.08.2023, 22:36:04] Error occurred on the user's side
+[12.08.2023, 22:36:15] start
+[12.08.2023, 22:36:25] API Call
+[12.08.2023, 22:36:26] Send API link to user
+[12.08.2023, 22:36:44] API Call
+[12.08.2023, 22:36:44] Display table
+[12.08.2023, 22:37:44] start
+[12.08.2023, 22:37:47] API Call
+[12.08.2023, 22:37:48] Error occurred on the user's side
+[12.08.2023, 22:37:54] API Call
+[12.08.2023, 22:37:54] Send API link to user
+[12.08.2023, 22:38:00] API Call
+[12.08.2023, 22:38:00] Send API link to user
+[12.08.2023, 22:38:03] start
+[12.08.2023, 22:38:07] API Call
+[12.08.2023, 22:38:08] Send API link to user
+[12.08.2023, 22:38:12] API Call
+[12.08.2023, 22:38:12] Send JSON data
+[12.08.2023, 22:43:46] start
+[12.08.2023, 22:45:17] start
+[12.08.2023, 22:45:25] API Call
+[12.08.2023, 22:45:25] Send JSON data
+[12.08.2023, 22:45:54] start
+[12.08.2023, 22:45:59] API Call
+[12.08.2023, 22:45:59] Send API link to user
+[12.08.2023, 22:47:59] start
+[12.08.2023, 22:48:32] start
+[12.08.2023, 22:49:02] start
+[12.08.2023, 22:49:03] start
+[12.08.2023, 22:49:20] start
+[12.08.2023, 22:49:30] start
+[12.08.2023, 22:49:59] start
+[12.08.2023, 22:51:27] start
+[12.08.2023, 22:52:57] start
+[12.08.2023, 22:53:12] start
+[12.08.2023, 22:53:34] start
+[12.08.2023, 22:53:35] start
+[12.08.2023, 22:53:37] start
+[12.08.2023, 22:53:52] start
+[12.08.2023, 22:53:55] start
+[12.08.2023, 22:53:59] start
+[12.08.2023, 22:54:07] start
+[12.08.2023, 22:54:17] start
+[12.08.2023, 22:54:25] start
+[12.08.2023, 22:54:29] start
+[12.08.2023, 22:54:29] start
+[12.08.2023, 22:54:30] start
+[12.08.2023, 22:54:32] start
+[12.08.2023, 22:54:48] start
+[12.08.2023, 22:55:56] start
+[12.08.2023, 22:56:11] API Call
+[12.08.2023, 22:56:11] Send API link to user
+[12.08.2023, 22:56:15] API Call
+[12.08.2023, 22:56:15] Send JSON data
+[12.08.2023, 22:56:39] start
+[12.08.2023, 22:56:50] start
+[12.08.2023, 22:59:36] start
+[12.08.2023, 22:59:39] API Call
+[12.08.2023, 22:59:39] Error occurred on the user's side
+[12.08.2023, 22:59:48] API Call
+[12.08.2023, 22:59:48] Send API link to user
+[12.08.2023, 22:59:50] API Call
+[12.08.2023, 22:59:50] Send JSON data
+[12.08.2023, 23:00:29] API Call
+[12.08.2023, 23:00:30] Send API link to user
+[12.08.2023, 23:00:30] start
+[12.08.2023, 23:00:34] API Call
+[12.08.2023, 23:00:34] Send API link to user
+[12.08.2023, 23:01:04] start
+[12.08.2023, 23:01:09] API Call
+[12.08.2023, 23:01:09] Send API link to user
+[12.08.2023, 23:01:13] API Call
+[12.08.2023, 23:01:13] Display table
+[12.08.2023, 23:01:40] start
+[12.08.2023, 23:01:42] start
+[12.08.2023, 23:01:46] API Call
+[12.08.2023, 23:01:47] Send API link to user
+[12.08.2023, 23:02:31] start
+[12.08.2023, 23:02:39] API Call
+[12.08.2023, 23:02:39] Send API link to user
+[12.08.2023, 23:03:02] API Call
+[12.08.2023, 23:03:02] Display table
+[12.08.2023, 23:04:29] start

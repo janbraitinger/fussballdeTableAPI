@@ -36,17 +36,24 @@ function getTimestamp() {
 
 logTimestamp(() => getTimestamp());
 const route = require('./routes/standardRoutes');
+const { dashboard } = require('./controllers/fetchFussball');
 const app = express();
 
 
-const PORT = 3001;
+const PORT = 3000;
 
 app.use(express.json());
 app.use(cors());
-app.use('/', route)
+app.use('/api/v1', route)
+
+app.get('/', (req, res) => {
+  console.log("start");
+  res.sendFile('index.html', { root: path.join(__dirname, 'views') });
+});
+
 app.set('trust proxy', true);
 
 
 app.listen(PORT, () => {
-    console.log('Server started on port 3001');
+    console.log('Server started on port ' + PORT);
 });

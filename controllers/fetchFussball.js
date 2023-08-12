@@ -70,6 +70,8 @@ module.exports.viewAPI = async (req, res) => {
     res.send(table);
 }
 
+
+
 module.exports.fetcher = async (req, res) => {
     const key = req.body.key;
     const website = req.body.website;
@@ -86,4 +88,6 @@ module.exports.fetcher = async (req, res) => {
         });
     }
 }
+
+
 

@@ -1,31 +1,180 @@
-<!-- html basic setup -->   
-<html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <title>KickAPI</title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-        <script type="text/javascript" src="handler.js" defer></script>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
  
-     
-<header>
-  Wandel Widget zur <span class="label">API</span> um
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #212529;
+      color: #ffffff;
+    }
 
- </header>
-<div id="wrapper">
-<input type="text" class="input" id="key" placeholder="Schlüssel">
-<input type="text" class="input" id="website" placeholder="Webseite"><br/>
-<span class="small">*Daten von Fußball.de</span>
-</div>
+    .header {
+      background-color: #343a40;
+      padding: 1rem;
+      text-align: center;
+    }
 
-<button class="button-flat">generieren</button>
+    .header h1 {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
 
-<input type="text" id="display" value="Dein API Link" readonly>
+    .header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
 
-  <div id="info">
-    <p>Wandle dein Tabellen-Widget von Fußball.de in eine API um. Als Ergebnis erhältst du einen Link, der mittels HTTP-Request eine JSON-Liste der Tabelle zurückgibt. Diese enthält den Tabellenplatz, den Vereinsnamen, das Logo als Link, die Punkte, die Tordifferenz und die Anzahl der gespielten Spiele. </div>
-    </body>
+    .form-container {
+      background-color: #343a40;
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .form-control {
+      background-color: #ffffff;
+      border: none;
+      border-bottom: 1px solid #000000;
+      color: #000000;
+      margin-bottom: 1rem;
+      border-radius: 0;
+    }
+
+    .generateBtn {
+      background-color: #007bff;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      color: #ffffff;
+      float:right;
+    }
+
+    .generateBtn:hover {
+      background-color: #0056b3;
+    }
+
+    .textWrapper {
+      font-size: 1rem;
+      line-height: 1.6;
+      background-color: #343a40;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      color: #ffffff;
+    }
+
+    #copyButton {
+      background-color: #007bff;
+      border: none;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.8rem;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    #copyButton:hover {
+      background-color: #0056b3;
+    }
+
+    #showTable{
+      display: none;
+      color:lightgray;
+          }
+
+
+  </style>
+  <title>Tabelle</title>
+</head>
+<body>
+  <header class="header">
+    <h1><a href="/starter" class="text-decoration-none text-white">Fußball.de Tabellen</a></h1>
+    <p class="lead">API Generator</p>
+    <code>Version: Alpha</code>
+  </header>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 mb-4 mb-md-0"> <!-- Nutze mb-4 mb-md-0 für den Abstand -->
+        <form id="apiForm" class="form-container">
+          <input
+            type="text"
+            class="form-control"
+            id="input1"
+            placeholder="Schlüssel"
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="input2"
+            placeholder="Webseite"
+          >
+          <button class="btn btn-primary generateBtn" type="submit">API generieren</button>
+          <br/><br/><br/>
+          <input
+            type="text"
+            class="form-control"
+            id="result"
+            readonly
+            placeholder="Deine API Url"
+          >
+          <p id="showTable">Tabelle Anzeigen</p>
+        </form>
+      </div>
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <p class="textWrapper">
+          Mit unserem kostenlosen Tool kannst Du dein Tabellen-Widget von Fußball.de schnell und einfach in eine API umwandeln. Alle Daten werden als JSON Nachricht unter dem entsprechenden Endpunkt bereitgestellt. Allgemein ist die API ansteuerbar über <code>/api/v1/schlüssel/webseite</code>. Durch den Tag <i>show</i> kannst du die Tabelle direkt im Browser anschauen <code>/api/v1/show</b>/schlüssel/webseite</code>.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+    const currentUrl = window.location.href;
+    const showTableElement = document.getElementById('showTable');
+
+
+
+    document.getElementById('apiForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const input1 = document.getElementById('input1').value;
+      const input2 = document.getElementById('input2').value;
+      const resultInput = document.getElementById('result');
+
+      if (input1.trim().length === 0 || input2.trim().length === 0) {
+        resultInput.value = 'Bitte fülle beide Felder aus!';
+        return;
+      }
+
+      try {
+        const rawResponse = await fetch(currentUrl + "api/v1/newAPI", {
+          method: "POST",
+          headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ key: input1, website: input2 }),
+        });
+        const content = await rawResponse.json();
+    
+        if (content.success === true) {
+          const url = currentUrl + "api/v1/" + input1 + "/" + input2;
+          const showUrl = currentUrl + "api/v1/show/" + input1 + "/" + input2;
+          resultInput.value = url;
+          showTableElement.innerHTML = '<a href=' + showUrl + ' style="text-decoration: none; color: inherit;"> <i>Tabelle anzeigen</i> </a>';
+          showTableElement.style.display = 'block';
+        } else {
+          resultInput.value = "Aus deinen Eingaben konnte keine API generiert werden";
+        }
+      } catch (error) {
+        console.error(error);
+        resultInput.value = "ERROR";
+      }
+    });
+  </script>
+</body>
 </html>
