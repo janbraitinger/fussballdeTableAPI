@@ -649,3 +649,8 @@
 [12.08.2023, 23:03:02] API Call
 [12.08.2023, 23:03:02] Display table
 [12.08.2023, 23:04:29] start
+[12.08.2023, 23:11:28] start
+[12.08.2023, 23:42:21] HTTP server is running on port 3000
+[12.08.2023, 23:42:21] Failed to create Let's Encrypt certificate: Command failed: certbot certonly --standalone -d tabelle-api.net
+/bin/sh: certbot: command not found
+
