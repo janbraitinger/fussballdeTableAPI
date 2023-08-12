@@ -11,7 +11,7 @@ COPY . .
 RUN npm install
 
 # Exponieren Sie den Port, auf dem die Anwendung ausgeführt wird
-EXPOSE 3001
+EXPOSE 3000
 
 # Starten Sie die Anwendung
 CMD ["node", "index.js"]
